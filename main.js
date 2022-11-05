@@ -1,89 +1,84 @@
-/*Variables 1*/
-let array = [5, 8, 20, -7, -10, -15, -20, -20, -2, -2, -50]
-let mayor = 0
+//ejercicio 1
+divisible(20)
 
-/*Variables 2*/
-let palabra = "Ana"
-let booleano = 1
+//ejercicio 2
+sumatoria(5)
 
-/*Variables 3*/
-let matriz = [[1,0,0], 
-              [0,1,1], 
-              [0,1,0]];
-let cont = 0
+//ejercicio 3
+alreves("pepe")
 
-/*Variables 4*/
-let duplicados = []
-const array2 = [...array].sort();
+//ejercicio 4
+intridi("lolcito")
 
-/*Variables 5*/
-const contador = 7;
-let asterisco = "";
+//ejercicio 5
+alfabetico("pepe")
 
-/*Ejercicio uno*/
-function mayores(lista1, num1) {
-for (let i = 0; i < lista1.length; i++) {
-    if (lista1[i] > num1) {
-        num1 = lista1[i];
-    } if ( i == 0) {
-        num1 = lista1[i]
+
+function divisible(_a) {
+    if (_a % 2 == 0) {
+      console.log(`${_a} es par`);
+    }else{
+      console.log(`${_a} es impar`);
     }
-}
-console.log("El numero mayor es " + num1) 
-}
-
-/*Ejercicio 2*/
-function palindromo(palabra, booleano) {
-palabra = palabra.toLowerCase()
-let j = palabra.length-1
-for (let i = 0; i < palabra.length; i++) {
-    if (palabra[i] != palabra[j]) {
-        booleano = 0
+    if (_a % 3 == 0) {
+      console.log(`${_a} es divisible por 3`);
+    }else{
+      console.log(`${_a} no es divisible por 3`);
     }
-    j--
-}
-if (booleano == 1) {
-    console.log("la palabra "+palabra+" es palindromo")
-} else {
-    console.log("la palabra "+palabra+" no es palindromo")
-}
-}
-
-/*Ejercicio 3*/
-function ceros(matriz, cont) {
-for (let x = 0; x < matriz.length; x++){ 
-    for (let y = 0; y < matriz.length; y++){
-    if (matriz[x][y] == 0) {
-        cont ++
-    }
-    }
-}
-console.log ("la cantidad de 0's es de "+cont)
-}
-
-/*Ejercicio 4*/
-function dobles(lista2, duplicados) {
-for (let i = 0; i < lista2.length; i++) {
-    if (lista2[i + 1 ] === lista2[i]) {
-        repetido = 1
-        duplicados.push(lista2[i])
-        console.log(duplicados)
-    }
-} if (duplicados.length == 0){
-    console.log("No se encontraron números repetidos en la lista de números recibida")
-}
-}
-
-/*Ejercicio 5*/
-function piramide(cont, asterisco){    
-    for(let i = 0; i <= cont-1; i++){
-      asterisco += "*";
-      console.log(asterisco); 
+    if (_a % 5 == 0) {
+      console.log(`${_a} es divisible por 5`);
+    }else{
+      console.log(`${_a} no es divisible por 5`);
     }
 }
 
-mayores(array, mayor)
-palindromo(palabra, booleano)
-ceros(matriz, cont)
-dobles(array2, duplicados)
-piramide(contador, asterisco)
+function sumatoria(_b) {
+    let contador = 0
+    for (let i = 1; i <= _b; i++) {
+      contador += i;
+      console.log(contador);
+    }
+  }
+
+function alreves(_c) {
+    let vacio = ""
+    let i = _c.length-1;
+    while (i >= 0) {
+      vacio += (_c[i]);
+      i --;
+    }
+    console.log(vacio);
+  }
+
+  function intridi(_d) {
+    const vocales = ["a","e","i","o","u"];
+    let palabra = "";
+    let vacio = 0;
+    for (let i = 0; i < _d.length; i++) {
+      for (let j = 0; j < vocales.length; j++) {
+        if (_d[i] == vocales[j]) {
+          vacio = 1;
+        }
+      }
+      if (vacio == 1) {
+        palabra += "i";
+      }else{
+        palabra += _d[i];
+      }
+      vacio= 0;
+    }
+    console.log(palabra);
+  }
+
+function alfabetico(_e) {
+  const alfabetico = "a,b,c,d,e,f,g,h,i,j,k,l,m,n,ñ,o,p,q,r,s,t,u,v,w,x,y,z"
+  let vacio = ""
+    for (let i = 0; i < alfabetico.length; i++) {
+      for (let j = 0; j < _e.length; j++) {
+        if (_e[j] == alfabetico[i]) {
+          vacio += _e[j];
+        }
+      }
+    }
+    console.log(vacio);
+  }
