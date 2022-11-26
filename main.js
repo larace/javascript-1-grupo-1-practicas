@@ -1,4 +1,4 @@
-//ejercicio 1
+/* //ejercicio 1
 divisible(20)
 
 //ejercicio 2
@@ -134,4 +134,47 @@ function alfabetico(_e) {
     median()
     }
     
-    array()
+    array() */
+
+    primo(13)	
+    numero()
+    par()
+    matrices(10)
+    
+    function primo(_a) {
+     if(_a == 4) return console.log("no es primo")
+    for (let x = 2; x < _a / 2; x++) {
+        if (_a % x == 0) return console.log("no es primo");
+      }
+      return console.log("es primo");
+    }
+    
+    function numero() {
+    for (num=1;num<=100;num++){
+           console.log(num);
+    }
+    }
+    
+    function par() {
+    for(let i = 1; i<= 100; i++){
+        if(i%2==0){
+         console.log(i + " es par");
+         }
+    }
+    }
+    
+    function matrices(_a) {
+      let matriz = []
+      for (let x = 1; x <= 10; x++) {
+        let fila = []
+        for (let y = 1; y <= x*10; y++) {
+          if (x == y) {
+            fila.push(x);
+          } else {
+            fila.push(y);
+          }
+        }
+        matriz.push(fila)
+      }
+      console.log(matriz)
+    }
