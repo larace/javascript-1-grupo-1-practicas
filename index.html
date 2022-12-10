@@ -1,0 +1,52 @@
+<!DOCTYPE html>  
+<html>  
+<body>  
+<h1>calculadora</h1>  
+<p>Por favor, introduce dos números:</p>  
+<p>num1</p>
+<input id="num1">  
+<p>num2</p>
+<input id="num2">  
+<p>operadores</p>
+<button type="button" onclick="suma()">+</button>
+<button type="button" onclick="resta()">-</button>  
+<button type="button" onclick="multi()">*</button>  
+<button type="button" onclick="divi()">%</button>    
+<p>resultado</p>
+<p id="sumando"></p>  
+<script>  
+function suma() {  
+  var x,y,suma,text;  
+  x = document.getElementById("num1").value;  
+  y = document.getElementById("num2").value;  
+    suma=parseFloat(x)+parseFloat(y);  
+    text= suma;  
+  document.getElementById("sumando").innerHTML = text;  
+}  
+function resta() {  
+  var x,y,suma,text;  
+  x = document.getElementById("num1").value;  
+  y = document.getElementById("num2").value;  
+    suma=parseFloat(x)-parseFloat(y);  
+    text= suma;  
+  document.getElementById("sumando").innerHTML = text;  
+}  
+function multi() {  
+  var x,y,suma,text;  
+  x = document.getElementById("num1").value;  
+  y = document.getElementById("num2").value;  
+    suma=parseFloat(x)*parseFloat(y);  
+    text= suma;  
+  document.getElementById("sumando").innerHTML = text;  
+} 
+function divi() {  
+  var x,y,suma,text;  
+  x = document.getElementById("num1").value;  
+  y = document.getElementById("num2").value;  
+    suma=parseFloat(x)/parseFloat(y);  
+    text= suma;  
+  document.getElementById("sumando").innerHTML = text;  
+} 
+</script>  
+</body>  
+</html>  
